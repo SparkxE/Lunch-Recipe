@@ -8,7 +8,7 @@ Thanks for reading this, and feel free to let me know if you have any questions.
 
 
 - NPM Commands - 
-npm expo install amplify
+npm install -g @aws-amplify/cli
 
 - AWS Documentation & Tutorials - 
 React Native Integration - https://docs.amplify.aws/start/q/integration/react-native/
