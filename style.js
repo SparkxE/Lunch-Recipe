@@ -6,8 +6,20 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         position: 'relative',
+        alignContent: 'center',
         marginTop: 75,
     },
+
+    titleBox:{
+        width: '80%',
+        alignSelf: 'flex-start',
+        alignItems: 'center',
+        paddingBottom: 40,
+        shadowColor: '#000',
+        shadowRadius: 4,
+        elevation: 5,
+    },
+
     mainBox: {
         width: '80%',
         alignSelf: 'center',
@@ -18,19 +30,24 @@ export const styles = StyleSheet.create({
         elevation: 5,
     },
 
-    title:{
-        fontSize: 30,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        textAlignVertical: 'top',
-    },
-
     titleText: {
         fontSize: 28,
         fontWeight: 'bold',
         textAlign: 'center',
+        alignSelf: 'center',
         marginTop: 10,
-      },
+    },
+
+    headerText:{
+	fontSize: 20,
+	fontWeight: '600',
+    },
+
+    itemText:{
+        fontSize: 16,
+        textAlign: 'left',
+        marginTop: 5,
+    },
 
     inputBox: {
         marginTop: 50,
@@ -45,6 +62,17 @@ export const styles = StyleSheet.create({
         borderRadius: 4,
         paddingHorizontal: 10,
         marginBottom: 10,
+    },
+
+    listArea: {
+    backgroundColor: "#f0f0f0",
+    flex: 1,
+    paddingTop: 16,
+    },
+
+    sectionContainer: {
+    	marginBottom: 16,
+    	marginHorizontal: 16,
     },
     
 });
