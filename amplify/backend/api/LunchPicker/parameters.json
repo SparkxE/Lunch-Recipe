@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "LunchPicker",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authlunchpicker7080e9a1",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2022-10-26T01:56:05.778Z"
+}

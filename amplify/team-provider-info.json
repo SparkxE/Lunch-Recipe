@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lunchpicker-dev-234610-authRole",
+      "UnauthRoleArn": "arn:aws:iam::073364979121:role/amplify-lunchpicker-dev-234610-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::073364979121:role/amplify-lunchpicker-dev-234610-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-lunchpicker-dev-234610-deployment",
+      "UnauthRoleName": "amplify-lunchpicker-dev-234610-unauthRole",
+      "StackName": "amplify-lunchpicker-dev-234610",
+      "StackId": "arn:aws:cloudformation:us-east-2:073364979121:stack/amplify-lunchpicker-dev-234610/e172a300-4e75-11ed-b552-06bed6f790f8",
+      "AmplifyAppId": "d1r8yxn6bpd03v"
+    },
+    "categories": {
+      "auth": {
+        "lunchpicker7080e9a1": {}
+      }
+    }
+  }
+}
