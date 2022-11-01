@@ -8,6 +8,7 @@ import {withAuthenticator} from 'aws-amplify-react-native';
 
 import {Amplify, Auth} from 'aws-amplify';
 import config from "./src/aws-exports";
+
 Amplify.configure({
   ...config,
   Analytics: {
@@ -44,7 +45,8 @@ function HomeScreen({navigation}){    //main landing page screen
       </View>
       <View style={styles.mainBox}>
         <Button title="Press for Search Page" color="#9c27b0" onPress={()=>navigation.navigate("Search")}></Button>
-	<Button title="Press to LogOut" color="#9c27b0" style={{marginTop: 20}} onPress={signOut}></Button>
+	      <Text> {/*this text area is used to space out the buttons*/}</Text>
+        <Button title="Press to LogOut" color="#9c27b0" style={{marginTop: 20}} onPress={signOut}></Button>
       </View>
     </View>
   );
@@ -53,7 +55,9 @@ function HomeScreen({navigation}){    //main landing page screen
 function SearchScreen(){  //
   return(
     <View style={styles.container}>
-      <Search/>
+      <View style={styles.mainBox}>
+        <Search/>
+      </View>
     </View>
     
   );

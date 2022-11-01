@@ -39,14 +39,16 @@ export const styles = StyleSheet.create({
     },
 
     headerText:{
-	fontSize: 20,
-	fontWeight: '600',
+        fontSize: 20,
+        fontWeight: '600',
+        textAlign: 'center'
     },
 
     itemText:{
         fontSize: 16,
         textAlign: 'left',
-        marginTop: 5,
+        marginBottom: 5,
+        flex: 1,
     },
 
     inputBox: {
@@ -65,9 +67,9 @@ export const styles = StyleSheet.create({
     },
 
     listArea: {
-    backgroundColor: "#f0f0f0",
-    flex: 1,
-    paddingTop: 16,
+        backgroundColor: "#f0f0f0",
+        flex: 1,
+        paddingTop: 16,
     },
 
     sectionContainer: {
