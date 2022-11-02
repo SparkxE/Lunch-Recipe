@@ -8,6 +8,7 @@ import {withAuthenticator} from 'aws-amplify-react-native';
 
 import {Amplify, Auth} from 'aws-amplify';
 import config from "./src/aws-exports";
+import { DataStore } from 'aws-amplify';
 
 Amplify.configure({
   ...config,
@@ -22,6 +23,7 @@ async function signOut() {
     } catch (error) {
         console.log('error signing out: ', error);
     }
+    await DataStore.clear();
 }
 
 
@@ -55,9 +57,7 @@ function HomeScreen({navigation}){    //main landing page screen
 function SearchScreen(){  //
   return(
     <View style={styles.container}>
-      <View style={styles.mainBox}>
-        <Search/>
-      </View>
+      <Search/>
     </View>
     
   );
