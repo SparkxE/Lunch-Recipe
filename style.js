@@ -1,3 +1,4 @@
+//standard imports to be safe (probably not necessary for stylesheet)
 import React from "react";
 import { StyleSheet, Text, View, Image} from "react-native";
 
