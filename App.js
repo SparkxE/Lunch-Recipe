@@ -36,6 +36,7 @@ export function App() {   //main display, uses NavigationContainer to use screen
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Home" component={HomeScreen} style={styles.mainBox} />
         <Stack.Screen name="Search" component={SearchScreen} style={styles.mainBox} />
+        <Stack.Screen name="Details" component={DetailsScreen} style={styles.mainBox}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
