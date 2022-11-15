@@ -1,3 +1,5 @@
+//Code written by Aaron Anderson, 
+
 //standard imports
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button, Image } from 'react-native';
@@ -34,9 +36,9 @@ export function App() {   //main display, uses NavigationContainer to use screen
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name="Home" component={HomeScreen} style={styles.mainBox} />
-        <Stack.Screen name="Search" component={SearchScreen} style={styles.mainBox} />
-        <Stack.Screen name="Details" component={DetailsScreen} style={styles.mainBox}/>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Search" component={SearchScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

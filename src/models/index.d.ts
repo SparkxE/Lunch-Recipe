@@ -11,7 +11,7 @@ type EagerRecipes = {
   readonly Name: string;
   readonly Description?: string | null;
   readonly Duration: number;
-  readonly Details?: (string | null)[] | null;
+  readonly Details: string[];
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -21,7 +21,7 @@ type LazyRecipes = {
   readonly Name: string;
   readonly Description?: string | null;
   readonly Duration: number;
-  readonly Details?: (string | null)[] | null;
+  readonly Details: string[];
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
