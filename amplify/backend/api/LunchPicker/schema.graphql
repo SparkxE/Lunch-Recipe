@@ -3,5 +3,6 @@ type Recipes @model @auth(rules: [{allow: public}, {allow: private, operations: 
   Name: String!
   Description: String
   Duration: Int!
-  Details: [String]
-} 
+  Details: [String!]!
+}
+ 
