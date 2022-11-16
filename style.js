@@ -1,6 +1,7 @@
+//Code Written by Aaron Anderson, 
 //standard imports to be safe (probably not necessary for stylesheet)
 import React from "react";
-import { StyleSheet, Text, View, Image} from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
@@ -11,7 +12,7 @@ export const styles = StyleSheet.create({
         marginTop: 75,
     },
 
-    titleBox:{
+    titleBox: {
         width: '80%',
         alignSelf: 'flex-start',
         alignItems: 'center',
@@ -39,13 +40,13 @@ export const styles = StyleSheet.create({
         marginTop: 10,
     },
 
-    headerText:{
+    headerText: {
         fontSize: 20,
         fontWeight: '600',
         textAlign: 'center'
     },
 
-    itemText:{
+    itemText: {
         fontSize: 16,
         textAlign: 'left',
         marginBottom: 5,
@@ -55,7 +56,7 @@ export const styles = StyleSheet.create({
     inputBox: {
         marginTop: 50,
     },
-    
+
     input: {
         width: '100%',
         height: 40,
@@ -75,8 +76,8 @@ export const styles = StyleSheet.create({
     },
 
     sectionContainer: {
-    	marginBottom: 16,
-    	marginHorizontal: 16,
+        marginBottom: 16,
+        marginHorizontal: 16,
     },
-    
+
 });
