@@ -1,17 +1,16 @@
 //Code written by Aaron Anderson, 
-
 //standard imports
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {
-  Text, 
-  View, 
-  TextInput, 
+  Text,
+  View,
+  TextInput,
   Button,
-  FlatList, 
-  SafeAreaView, 
+  FlatList,
+  SafeAreaView,
   Pressable
- } from 'react-native';
+} from 'react-native';
 import { useState, useEffect } from 'react';
 import { styles } from '../style.js';
 import { DataStore } from 'aws-amplify';
@@ -49,12 +48,14 @@ export default function Search() {
   const renderItem = ({ item }) => (
 
     //renders items, trims Description value down and adds "..." if over 20 characters
+    //Pressable passes the selected item Name and Details fields to the Details screen to be rendered
+    
     <SafeAreaView style={styles.listArea}>
-      <Pressable onPress={()=> navigation.navigate('Details', {name: item.Name, steps: item.Details})}>
+      <Pressable onPress={() => navigation.navigate('Details', { id: item.id, name: item.Name})}>
         <Text style={styles.itemText}>
-          {'\t'}{item.Name}
-          {'\t\t'}{item.Description.length > 20 ? `${item.Description.substring(0, 20)}...` : `${item.Description}`}
-          {'\t\t'}{`${item.Duration}`}
+          {'\t'}Name: {item.Name}
+          {'\n\t'} Description: {item.Description.length > 20 ? `${item.Description.substring(0, 20)}...` : `${item.Description}`}
+          {'\n\t'} Cook Time: {`${item.Duration}`}
         </Text>
       </Pressable>
     </SafeAreaView>

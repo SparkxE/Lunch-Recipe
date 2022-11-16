@@ -1,5 +1,4 @@
 //Code written by Aaron Anderson, 
-
 //standard imports
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button, Image } from 'react-native';

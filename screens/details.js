@@ -1,5 +1,4 @@
 //Code Written by Aaron Anderson, 
-
 //standard imports
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
@@ -10,16 +9,28 @@ import { DataStore } from 'aws-amplify';
 import { Recipes } from '../src/models';
 import { useRoute } from '@react-navigation/native';
 
+const Details = () => {
+  const route = useRoute();
+  const [steps, setSteps]=useState([]);
+  let subscription;
+  useEffect(() => {
+    //query list and allow data updates
+    subscription = DataStore.observeQuery(Recipes, items=>items.id('eq', route.params.id)).subscribe((snapshot) => {
+      const { items, isSynced } = snapshot;
+      console.log(items=>items.Details);
+      setSteps(items.Details);
+    });
 
+    //unsubscribe to updates when component is destroyed to prevent memory leak
+    return function cleanup() {
+      subscription.unsubscribe();
+    }
+  }, []);
 
-const Details=()=> {
-  const route=useRoute();
+  const renderItem = ({ item }) => {
 
-  const renderItem=({item})=>{
     <View style={styles.listArea}>
-      <Text style={styles.itemText}>
-        {item}
-      </Text>
+      <Text>{item}</Text>
     </View>
   }
 
@@ -30,11 +41,12 @@ const Details=()=> {
           {route.params.name}
         </Text>
       </Text>
+      <Text>{steps}</Text>
       <FlatList
-      data={route.params.steps}
-      keyExtractor={({ id }) => id}
-      renderItem={renderItem}
-    ></FlatList>
+        data={steps}
+        renderItem={renderItem}
+        keyExtractor={item=>item.Details}
+      ></FlatList>
     </View>
   );
 }
