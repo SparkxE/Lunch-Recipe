@@ -1,4 +1,5 @@
-//Code written by Aaron Anderson, 
+//Code written by Aaron Anderson, Krithik Raja, Derrick Benson
+
 //standard imports
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button, Image } from 'react-native';
@@ -20,6 +21,7 @@ Amplify.configure({
 //screen imports
 import Search from './screens/search.js';
 import Details from './screens/details.js';
+import Add from './screens/addRecipe.js';
 
 async function signOut() {
   try {
@@ -38,6 +40,7 @@ export function App() {   //main display, uses NavigationContainer to use screen
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Search" component={SearchScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Add" component={AddScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -52,6 +55,8 @@ function HomeScreen({ navigation }) {    //main landing page screen
       </View>
       <View style={styles.mainBox}>
         <Button title="Press for Search Page" color="#9c27b0" onPress={() => navigation.navigate("Search")}></Button>
+        <Text> {/*this text area is used to space out the buttons, should probably find a better way*/}</Text>
+        <Button title="Press to Add Recipe" color="#9c27b0" style={{ marginTop: 20}} onPress={() => navigation.navigate("Add")}></Button>
         <Text> {/*this text area is used to space out the buttons, should probably find a better way*/}</Text>
         <Button title="Press to LogOut" color="#9c27b0" style={{ marginTop: 20 }} onPress={signOut}></Button>
       </View>
@@ -72,6 +77,14 @@ function DetailsScreen() {
   return (
     <View style={styles.container}>
       <Details />
+    </View>
+  )
+}
+
+function AddScreen(){
+  return (
+    <View style={styles.container}>
+      <Add />
     </View>
   )
 }
