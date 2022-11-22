@@ -11,21 +11,21 @@ import { useRoute } from '@react-navigation/native';
 
 const Details = () => {
   const route = useRoute();
-  const [steps, setSteps]=useState([]);
-  let subscription;
-  useEffect(() => {
-    //query list and allow data updates
-    subscription = DataStore.observeQuery(Recipes, items=>items.id('eq', route.params.id)).subscribe((snapshot) => {
-      const { items, isSynced } = snapshot;
-      console.log(items=>items.Details);
-      setSteps(items.Details);
-    });
+  //const [steps, setSteps] = useState([]);
+  //let subscription;
+  // useEffect(() => {
+  //   //query list and allow data updates
+  //   subscription = DataStore.observeQuery(Recipes, items.id("eq", route.params.id)).subscribe((snapshot) => {
+  //     const { items, isSynced } = snapshot;
+  //     console.log(items.id);
+  //     // setSteps();
+  //   });
 
-    //unsubscribe to updates when component is destroyed to prevent memory leak
-    return function cleanup() {
-      subscription.unsubscribe();
-    }
-  }, []);
+  //   //unsubscribe to updates when component is destroyed to prevent memory leak
+  //   return function cleanup() {
+  //     subscription.unsubscribe();
+  //   }
+  // }, []);
 
   const renderItem = ({ item }) => {
 
@@ -41,11 +41,10 @@ const Details = () => {
           {route.params.name}
         </Text>
       </Text>
-      <Text>{steps}</Text>
+      <Text>{""}</Text>
       <FlatList
-        data={steps}
+        data={route.params.steps}
         renderItem={renderItem}
-        keyExtractor={item=>item.Details}
       ></FlatList>
     </View>
   );
