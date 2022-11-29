@@ -37,21 +37,13 @@ export default function Search() {
     }
   }, []);
 
-  async function setComplete(updateValue, list) {
-    await DataStore.save(
-      Recipes.copyOf(list, updated => {
-        updated.isComplete = updateValue
-      })
-    );
-  }
-
   const renderItem = ({ item }) => (
 
     //renders items, trims Description value down and adds "..." if over 20 characters
     //Pressable passes the selected item Name and Details fields to the Details screen to be rendered
-    
+
     <SafeAreaView style={styles.listArea}>
-      <Pressable onPress={() => navigation.navigate('Details', { id: item.id, name: item.Name})}>
+      <Pressable onPress={() => navigation.navigate('Details', {name: item.Name, id: item.id })}>
         <Text style={styles.itemText}>
           {'\t'}Name: {item.Name}
           {'\n\t'} Description: {item.Description.length > 20 ? `${item.Description.substring(0, 20)}...` : `${item.Description}`}
