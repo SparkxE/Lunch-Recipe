@@ -43,7 +43,7 @@ export default function Search() {
     //Pressable passes the selected item Name and Details fields to the Details screen to be rendered
 
     <SafeAreaView style={styles.listArea}>
-      <Pressable onPress={() => navigation.navigate('Details', {name: item.Name, id: item.id })}>
+      <Pressable onPress={() => navigation.navigate('Details', { name: item.Name, id: item.id })}>
         <Text style={styles.itemText}>
           {'\t'}Name: {item.Name}
           {'\n\t'} Description: {item.Description.length > 20 ? `${item.Description.substring(0, 20)}...` : `${item.Description}`}
