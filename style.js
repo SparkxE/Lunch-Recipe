@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
         backgroundColor: '#fff',
         position: 'relative',
         alignContent: 'center',
-        marginTop: 75,
     },
 
     titleBox: {
@@ -43,7 +42,7 @@ export const styles = StyleSheet.create({
     headerText: {
         fontSize: 20,
         fontWeight: '600',
-        textAlign: 'center'
+        textAlign: 'left'
     },
 
     itemText: {
@@ -73,6 +72,12 @@ export const styles = StyleSheet.create({
         paddingTop: 16,
         margin: 10,
         flex: 1
+    },
+
+    listItem: {
+        backgroundColor: "#f0f0f0",
+        paddingTop: 16,
+        margin: 10,
     },
 
     sectionContainer: {

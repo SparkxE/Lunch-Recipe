@@ -51,7 +51,7 @@ function HomeScreen({ navigation }) {    //main landing page screen
   return (
     <View style={styles.container}>
       <View style={styles.mainBox}>
-        <Text style={styles.titleText}>Quick-Lunch Demo Interface</Text>
+        <Text style={styles.titleText}>Welcome to Quick-Lunch!</Text>
       </View>
       <View style={styles.mainBox}>
         <Button title="Press for Search Page" color="#ff9b00" onPress={() => navigation.navigate("Search")}></Button>

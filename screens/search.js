@@ -42,7 +42,7 @@ export default function Search() {
     //renders items, trims Description value down and adds "..." if over 20 characters
     //Pressable passes the selected item Name and Details fields to the Details screen to be rendered
 
-    <SafeAreaView style={styles.listArea}>
+    <SafeAreaView style={styles.listItem}>
       <Pressable onPress={() => navigation.navigate('Details', { name: item.Name, id: item.id })}>
         <Text style={styles.itemText}>
           {'\t'}Name: {item.Name}
@@ -65,19 +65,19 @@ export default function Search() {
 
   return (
     <View>
-      <Text style={styles.titleText}>Quick Recipe Demo</Text>
+      <Text style={styles.titleText}>Quick-Lunch Recipe Finder</Text>
       <View style={styles.mainBox}>
         <Text style={styles.headerText}>How quickly would you like to make food?</Text>
         <TextInput style={styles.input} onChangeText={(val) => time = parseInt(val)} placeholder="Enter Cook Time Here" keyboardType="number-pad" />
         <Button title='Search by Cook Time' color="#ff9b00" onPress={updateList} />
       </View>
-      <View>
+      <SafeAreaView>
         <FlatList
           data={list}
           keyExtractor={({ id }) => id}
           renderItem={renderItem}
         ></FlatList>
-      </View>
+      </SafeAreaView>
     </View>
   );
 };
