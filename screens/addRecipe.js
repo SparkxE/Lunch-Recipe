@@ -33,7 +33,7 @@ export default function Add() {
     if(step!=null){
       stepList.push(step);  //push saved string into stepList array
       console.log(step);
-      //step = "";
+      step = "";
       Alert.alert(
         "Step Added Successfully!",
         `Current Number of Steps: ${stepList.length}`,
