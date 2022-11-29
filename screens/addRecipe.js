@@ -70,7 +70,7 @@ export default function Add() {
 
   //function for adding recipe details to the Datastore
   async function submitRecipe() {
-    if(name!=null && describe!=null && time!=null && stepList!=[]){
+    if(name!=null && describe!=null && time!=null && stepList[0]!=null){
       await DataStore.save(new Recipes({ Name: name, Description: describe, Duration: time, Details: stepList }));
       name = "", describe = "", time = 0, step = "", stepList = [];
       Alert.alert(
