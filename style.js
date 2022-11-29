@@ -72,6 +72,7 @@ export const styles = StyleSheet.create({
         backgroundColor: "#f0f0f0",
         paddingTop: 16,
         margin: 10,
+        flex: 1
     },
 
     sectionContainer: {
