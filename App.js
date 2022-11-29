@@ -40,7 +40,7 @@ export function App() {   //main display, uses NavigationContainer to use screen
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Search" component={SearchScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
-        <Stack.Screen name="Add" component={AddScreen}/>
+        <Stack.Screen name="Add" component={AddScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -54,11 +54,11 @@ function HomeScreen({ navigation }) {    //main landing page screen
         <Text style={styles.titleText}>Quick-Lunch Demo Interface</Text>
       </View>
       <View style={styles.mainBox}>
-        <Button title="Press for Search Page" color="#9c27b0" onPress={() => navigation.navigate("Search")}></Button>
+        <Button title="Press for Search Page" color="#ff9b00" onPress={() => navigation.navigate("Search")}></Button>
         <Text> {/*this text area is used to space out the buttons, should probably find a better way*/}</Text>
-        <Button title="Press to Add Recipe" color="#9c27b0" style={{ marginTop: 20}} onPress={() => navigation.navigate("Add")}></Button>
+        <Button title="Press to Add Recipe" color="#ff9b00" style={{ marginTop: 20 }} onPress={() => navigation.navigate("Add")}></Button>
         <Text> {/*this text area is used to space out the buttons, should probably find a better way*/}</Text>
-        <Button title="Press to LogOut" color="#9c27b0" style={{ marginTop: 20 }} onPress={signOut}></Button>
+        <Button title="Press to LogOut" color="#ff9b00" style={{ marginTop: 20 }} onPress={signOut}></Button>
       </View>
     </View>
   );
@@ -81,7 +81,7 @@ function DetailsScreen() {
   )
 }
 
-function AddScreen(){
+function AddScreen() {
   return (
     <View style={styles.container}>
       <Add />

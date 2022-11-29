@@ -69,7 +69,7 @@ export default function Search() {
       <View style={styles.mainBox}>
         <Text style={styles.headerText}>How quickly would you like to make food?</Text>
         <TextInput style={styles.input} onChangeText={(val) => time = parseInt(val)} placeholder="Enter Cook Time Here" keyboardType="number-pad" />
-        <Button title='Search by Cook Time' color="#9c27b0" onPress={updateList} />
+        <Button title='Search by Cook Time' color="#ff9b00" onPress={updateList} />
       </View>
       <View>
         <FlatList
